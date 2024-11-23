@@ -96,21 +96,23 @@ img {
 }
 /* Header Styles here  */
 .header-nav {
-    position: static;
+    position: fixed;
     z-index: 10;
-    top: 0;
+    top: 60px;
     left: 0;
     right: 0;
+    width: 100%;
     padding: 16px 0;
     background-color: #fff;
     border-bottom: 1px solid #fffafa;
     transition: all 0.5s ease-in-out;
+    
 }
 .header-nav.top {
-    position: fixed;
-    background: #ffffff;
+    top: 0;
     border-bottom: 1px solid #0001FF;
 }
+
 .header-nav.top .logo {
     font-size: 30px;
     color: #000000;
@@ -200,6 +202,9 @@ nav ul {
     animation-play-state: paused;
 }
 /* hero styles starts here  */
+.hero-section {
+    padding: 182px 0 112px;
+}
 section {
     padding: 112px 0;
 }
@@ -510,6 +515,9 @@ span.bottom-info {
     section {
         padding: 75px 0;
     }
+    .hero-section {
+        padding: 149px 0 75px;
+    }
     .pre-header {
         font-size: 18px;
     }
@@ -629,6 +637,9 @@ span.bottom-info {
     section {
         padding: 50px 0;
     }
+    .hero-section {
+        padding: 110px 0 50px;
+    }
     .primary-heading {
         font-size: 32px;
     }
@@ -679,5 +690,7 @@ span.bottom-info {
     .want-list-item {
         margin-bottom: 10px;
     }
-    
+    .header-nav {
+        top: 40px;
+    }
 }
