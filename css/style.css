@@ -142,6 +142,9 @@ nav ul {
     line-height: 1.5;
     color: #0001FF;
 }
+.nav-link-item.d-mb{
+    display: none;
+}
 .nav-link-item:hover {
     color: #afaaaa;
 }
@@ -150,38 +153,17 @@ nav ul {
 }
 .toggle-btn {
     display: none;
-    cursor: pointer;
-    position: relative;
-    width: 31px;
-    height: 20px; 
-    /* display: flex; */
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
 }
-.line-1, .line-2, .line-3 {
-    width: 31px;
-    height: 3px;
-    background: linear-gradient(258deg, #f8e231 0%, #f06735 50%);
-    transition: all 0.3s;
-}
-.toggle-open .line-1 {
-    transform: rotate(-45deg) translate(-4px, 7px);
-}
-.toggle-open .line-2 {
-    opacity: 0;
-}
-.toggle-open .line-3 {
-    transform: rotate(45deg) translate(-4px, -7px);
-}
+
 /* Header top bar styles here  */
 .top-bar {
     background-color: #0001FF;
     padding: 16px 0;
+    overflow: hidden;
 }
-.top-bar  .container {
+/* .top-bar  .container {
     display: flex;
-}
+} */
 .number-items {
     display: flex;
     align-items: center;
@@ -191,10 +173,11 @@ nav ul {
     /* animation: 35s slides infinite linear; */
  }
 .number-block {
-    display: flex;
+    display: flex !important;
     flex-wrap: wrap;
     align-items: center;
     gap: 10px;
+    padding-inline: 20px;
 }
 .number-block span, .number-block a {
     font-size: 20px;
@@ -293,19 +276,21 @@ section {
 .vivid-splash {
     padding: 112px 0;
 }
+.vivid-splash .pre-header span {
+    color: #000;
+}
 .vivid-flex-row {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    justify-content: space-between;
     gap: 80px;
 }
-.vivid-content {
+/* .vivid-content {
     width: 46%;
 }
 .vivid-img-wrapper {
     width: 46%;
-}
+} */
 .header-post {
     font-size: 18px;
     line-height: 1.5;
@@ -363,6 +348,14 @@ section {
 .dilivery-row .primary-heading {
     text-align: left;
 }
+.dilivery-row h3  span {
+    font-weight: 300;
+    color: #000;
+    font-family: 'Switzer';
+}
+.dilivery-row .primary-btn {
+    margin-top: 40px;
+}
 /* footer styles here  */
 footer {
     background: #0001FF;
@@ -416,4 +409,275 @@ footer {
 }
 span.bottom-info {
     text-decoration: none;
+}
+@media screen and (max-width:1280px) {
+    .primary-heading {
+        font-size: 70px;
+    }
+    .secondry-heading {
+        font-size: 52px;
+    }
+    .secondry-heading .heading-black {
+        font-size: 70px;
+    }
+    .bottles-section .primary-heading {
+        font-size: 120px;
+    }
+    #bottles h2:after {
+        top: -65px;
+        right: -50px;
+    }
+    #bottles h2:before {
+        bottom: -190px;
+        left: -68px;
+    }
+    .arm-row .arm {
+        max-width: 270px;
+        bottom: 20px;
+    }
+    .arm-row .arm.right {
+        right: -90px;
+    }
+    .arm-row .arm.left {
+        left: -90px;
+    }
+    .vivid-flex-row {
+        grid-template-columns: 1fr .75fr;
+        gap: 40px;
+    }
+    .list-heading {
+        font-size: 24px;
+        margin: 20px 0 10px;
+    }
+}
+@media screen  and (max-width:1024px) {
+    .primary-heading {
+        font-size: 60px;
+    }
+    .bottles-section .primary-heading {
+        font-size: 100px;
+    }
+    .arm-row .arm {
+        max-width: 210px;
+        bottom: 30px;
+    }
+    .arm-row .arm.left {
+        left: -50px;
+    }
+    .arm-row .arm.right {
+        right: -50px;
+    }
+    #bottles h2:before {
+        width: 220px;
+        height: 230px;
+        bottom: -141px;
+        left: -51px;
+    }
+    #bottles h2:after {
+        width: 150px;
+        height: 144px;
+        top: -69px;
+        right: -26px;
+    }
+    nav {
+        max-width: 330px;
+        width: 100%;
+    }
+    .pre-header {
+        font-size: 24px;
+    }
+    .secondry-heading {
+        font-size: 44px;
+    }
+    .secondry-heading .heading-black {
+        font-size: 58px;
+    }
+    .want-list {
+        margin: 10px 0 20px 22px;
+    }
+    .list-heading {
+        font-size: 19px;
+    }
+    .default-text {
+        font-size: 16px;
+    }
+    .dilivery-row .primary-btn {
+        margin-top: 20px;
+    }
+    .vivid-splash {
+        padding: 75px 0;
+    }
+    section {
+        padding: 75px 0;
+    }
+    .pre-header {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 768px) {
+    nav {
+        position: fixed;
+        top: 94px;
+        right: -100%;
+        width: 100%;
+        min-height: 350vh;
+        background: #0001FF;
+        text-align: left;
+        transition: all 0.5s;
+        max-width: 100%;
+    }
+    .header-nav.top nav {
+        top: 59px;
+    }
+    nav ul {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        gap: 0;
+    }
+    nav ul li{
+        display: block;
+        width: 100%;
+    }
+    nav ul li a {
+        padding: 10px 20px;
+        border-bottom: 1px solid #fff;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .toggle-btn {
+        position: relative;
+        width: 31px;
+        height: 3px;
+        background: #0001FF;
+        flex-shrink: 0;
+        display: block;
+    }
+    .toggle-btn::before,
+    .toggle-btn::after {
+        position: absolute;
+        content: "";
+        height: 3px;
+        display: block;
+        background: #0001FF;
+        left: 0;
+        right: 0;
+        transition: all 0.3s;
+    }
+    .toggle-btn::before {
+        bottom: 8px;
+    }
+    .toggle-btn::after {
+        top: 8px;
+    }
+    .toggle-open {
+        background: transparent;
+    }
+    .toggle-open::before,
+    .toggle-open::after {
+        content: "";
+        background: #0001FF;
+        display: block;
+        position: absolute;
+        top: -4px;
+        transition: all 0.3s;
+    }
+    .toggle-open::before {
+        transform: rotate(-45deg);
+    }
+    .toggle-open::after {
+        transform: rotate(45deg);
+    }
+    .nav-show {
+        right: 0;
+        transition: all 0.5s;
+    }    
+    .nav-link-item {
+        color: #fff;
+    }
+    .nav-link-item.d-mb{
+        display: block;
+    }
+    .bottles-section .primary-heading {
+        font-size: 60px;
+    }
+    #bottles h2:before {
+        width: 57px;
+        height: 98px;
+        bottom: -54px;
+        left: -9px;
+    }
+    #bottles h2:after {
+        width: 57px;
+        height: 98px;
+        top: -54px;
+        right: -25px;
+    }
+    .glases-wrapper {
+        margin: -80px auto -90px;
+        max-width: 200px;
+    }
+    .vivid-flex-row {
+        grid-template-columns: 1fr;
+        gap: 0px;
+    }
+    .vivid-splash {
+        padding: 50px 0;
+    }
+    section {
+        padding: 50px 0;
+    }
+    .primary-heading {
+        font-size: 32px;
+    }
+    .arm-row .arm {
+        max-width: 80px;
+        bottom: 80px;
+    }
+    .arm-row .arm.left {
+        left: -20px;
+    }
+    .arm-row .arm.right {
+        right: -20px;
+    }
+    .number-block span, .number-block a {
+        font-size: 14px;
+    }
+    .primary-btn, .header-btn {
+        font-size: 14px;
+    }
+    .hero-body {
+        margin: 20px 0 30px;
+    }
+    .top-bar {
+        padding: 10px 0;
+    }
+    .header-btn {
+        display: none;
+    }
+    .footer-btm-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+    footer {
+        padding: 40px 0;
+    }
+    .footer-top {
+        padding-bottom: 40px;
+    }
+    .secondry-heading {
+        font-size: 35px;
+    }
+    .secondry-heading .heading-black {
+        font-size: 44px;
+    }
+    .header-post {
+        margin: 10px 0;
+    }
+    .want-list-item {
+        margin-bottom: 10px;
+    }
+    
 }
