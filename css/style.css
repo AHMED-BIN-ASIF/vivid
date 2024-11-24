@@ -75,16 +75,21 @@ img {
     line-height: 1.5;
     color: #fff;
     background-color: #0001FF;
-    padding: 12px 24px;
+    padding: 12px 10px 12px 24px;
     border: 1px solid#0001FF;
     border-radius: 100px;
     text-transform: uppercase;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
     transition: all 0.3s ease;
 }
 .primary-btn:hover {
-    color: #f8e231;
-    border: 1px solid #f8e231;
+    transform: scale(1.1);
+}
+.cta-icon {
+    width: 27px;
+    height: 27px;
 }
 .default-text {
     font-family: 'Switzer';
@@ -148,10 +153,14 @@ nav ul {
     display: none;
 }
 .nav-link-item:hover {
-    color: #afaaaa;
+    color: #000;
 }
 .header-btn {
-    padding: 8px 20px;
+    padding: 8px 10px 8px 20px;
+}
+.header-btn .cta-icon {
+width: 22px;
+height: 22px;
 }
 .toggle-btn {
     display: none;
@@ -528,7 +537,7 @@ span.bottom-info {
         top: 94px;
         right: -100%;
         width: 100%;
-        min-height: 350vh;
+        min-height: calc(100vh - 95px);
         background: #0001FF;
         text-align: left;
         transition: all 0.5s;
@@ -536,6 +545,7 @@ span.bottom-info {
     }
     .header-nav.top nav {
         top: 59px;
+        min-height: calc(100vh - 60px);
     }
     nav ul {
         flex-direction: column;
@@ -554,6 +564,12 @@ span.bottom-info {
         display: block;
         width: 100%;
         text-align: center;
+        background: transparent;
+        transition: all 0,5s ease-in-out;
+    }
+    nav ul li a:hover {
+        border-bottom: 1px solid #000000;
+        background: #f7f7f7;
     }
     .toggle-btn {
         position: relative;
@@ -692,5 +708,9 @@ span.bottom-info {
     }
     .header-nav {
         top: 40px;
+    }
+    .cta-icon {
+        width: 20px;
+        height: 20px;
     }
 }

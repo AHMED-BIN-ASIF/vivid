@@ -1,0 +1,10 @@
+.story .primary-heading {
+    max-width: 550px;
+    margin-inline: auto;
+}
+.primary-heading span {
+    color: #000;
+}
+.default-text .blue {
+    color: #0001FF;
+}
