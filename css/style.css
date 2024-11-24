@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 body {
     font-family: 'Switzer';
@@ -628,16 +629,16 @@ span.bottom-info {
         font-size: 60px;
     }
     #bottles h2:before {
-        width: 57px;
-        height: 98px;
-        bottom: -54px;
-        left: -9px;
+        width: 54px;
+        height: 91px;
+        bottom: -43px;
+        left: -6px;
     }
     #bottles h2:after {
-        width: 57px;
-        height: 98px;
-        top: -54px;
-        right: -25px;
+        width: 50px;
+        height: 83px;
+        top: -48px;
+        right: -11px;
     }
     .glases-wrapper {
         margin: -80px auto -90px;
@@ -646,6 +647,10 @@ span.bottom-info {
     .vivid-flex-row {
         grid-template-columns: 1fr;
         gap: 0px;
+        text-align: center;
+    }
+    .dilivery-row .primary-heading {
+        text-align: center;
     }
     .vivid-splash {
         padding: 50px 0;
@@ -684,10 +689,6 @@ span.bottom-info {
     .header-btn {
         display: none;
     }
-    .footer-btm-links {
-        flex-direction: column;
-        gap: 15px;
-    }
     footer {
         padding: 40px 0;
     }
@@ -705,6 +706,7 @@ span.bottom-info {
     }
     .want-list-item {
         margin-bottom: 10px;
+        list-style-type: none;
     }
     .header-nav {
         top: 40px;
