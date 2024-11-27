@@ -43,7 +43,7 @@ $(document).ready(function () {
     var pos = s.position();
     $(window).scroll(function () {
         var windowpos = $(window).scrollTop();
-        if ((windowpos >= pos.top) & (windowpos >=1)) {
+        if ((windowpos >= pos.top) & (windowpos >=2)) {
             $(".header-nav").addClass("top");
         } else {
             $(".header-nav").removeClass("top");
